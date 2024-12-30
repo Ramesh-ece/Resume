@@ -1,0 +1,139 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.publications-container {
+  margin: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+  border-left: 6px solid #0056b3;
+  animation: fadeIn 1s ease-out; /* Fade-in effect */
+}
+
+.publications-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+  animation: slideInFromBottom 1.2s ease-out; 
+}
+
+.publications-container input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.publications-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.publications-table th,
+.publications-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.publications-table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.publications-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.publications-table tbody tr:hover {
+  background-color: #e9ecef;
+  transition: background-color 0.3s ease;
+}
+
+.publications-table td {
+  color: #555;
+  font-size: 1rem;
+}
+
+.publications-table td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.publications-table td a:hover {
+  text-decoration: underline;
+  transition: text-decoration 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .publications-table,
+  .publications-table thead,
+  .publications-table tbody,
+  .publications-table th,
+  .publications-table td,
+  .publications-table tr {
+      display: block;
+  }
+
+  .publications-table th {
+      display: none;
+  }
+
+  .publications-table tr {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+  }
+
+  .publications-table td {
+      padding: 10px;
+      text-align: right;
+      position: relative;
+  }
+
+  .publications-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      color: #333;
+  }
+}

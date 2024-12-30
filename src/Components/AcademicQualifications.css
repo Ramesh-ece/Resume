@@ -1,0 +1,196 @@
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Main Container Styling */
+.academic-container {
+  margin: 50px auto;
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 100px;
+  border-left: 6px solid #0056b3;
+  animation: fadeIn 1s ease-out; /* Fade-in effect */
+}
+
+/* Title Styling */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+  animation: slideInFromBottom 1.2s ease-out;
+}
+
+/* Table Styling */
+.qualifications-table {
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.qualifications-table th {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Table Row Styling */
+.qualifications-table td {
+  padding: 12px;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate Row Color */
+.qualifications-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.qualifications-table tr:hover {
+  background-color: #e9f7fd;
+  transition: background-color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Sidebar adjustment */
+.sidebar ~ .academic-container {
+  margin-left: 80px;
+}
+
+/* Responsive Table */
+@media (max-width: 1200px) {
+  .academic-container {
+    margin-top: 60px;
+    padding: 25px;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .qualifications-table th,
+  .qualifications-table td {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .academic-container {
+    margin-top: 50px;
+    padding: 20px;
+  }
+
+  .qualifications-table th,
+  .qualifications-table td {
+    padding: 8px 10px;
+  }
+
+  .qualifications-table td {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .academic-container {
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .qualifications-table th,
+  .qualifications-table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .qualifications-table {
+    margin: 10px 0;
+    width: 100%; /* Adjust table width */
+    box-sizing: border-box; /* Ensure proper table behavior */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  /* Adjust animation for smaller screens */
+  .academic-container {
+    animation: fadeIn 1.5s ease-out 0.2s; /* Delay for better effect */
+  }
+
+  .section-title {
+    animation: slideInFromBottom 1s ease-out 0.3s; /* Delay added */
+  }
+
+  .qualifications-table {
+    animation: fadeIn 1.5s ease-out 0.4s; /* Delay for table */
+  }
+}
+
+@media (max-width: 480px) {
+  .academic-container {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .qualifications-table th,
+  .qualifications-table td {
+    padding: 6px 8px;
+    font-size: 0.85rem;
+  }
+}

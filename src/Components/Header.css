@@ -1,0 +1,196 @@
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    height: 100px; /* Reduced header size */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px; /* Space between text and photo */
+  }
+  
+  /* Move hamburger to the left */
+  .hamburger-btn {
+    position: absolute; /* Position it on the left */
+    left: 20px; /* Adjust this to your preferred space from the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Exact centering */
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .hamburger-btn:hover {
+    color: #ffd700;
+  }
+  
+  .profile-photo {
+    display: flex;
+    justify-content: flex-end; /* Align photo to the right */
+    align-items: center; /* Center-align vertically */
+    margin-right: 20px; /* Add space between the image and the text */
+  }
+  
+  .profile-photo img {
+    width: 70px; /* Small size */
+    height: 90px; /* Ensure the image is a perfect circle */
+    object-fit: cover; /* Prevent distortion of the image */
+    border-radius: 90%; /* Makes the image circular */
+    border: 2px solid white; /* Add a thin white border for styling */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    margin-left: 40px;
+  }
+
+  .text-content h1 {
+    font-size: 1.5rem;  /* Adjust font size */
+    margin: 0;
+    font-weight: bold;  /* Bold font for better visibility */
+    color: white;  /* Text color */
+    text-align: left;  /* Align text to the left */
+  }
+  
+  .text-content p {
+    font-size: 1rem;  /* Adjust paragraph size */
+    margin: 5px 0;
+    line-height: 1.5;
+    color: white;  /* Text color for the paragraph */
+  }
+  
+/* Queries for Responsive Design */
+
+@media (max-width: 1200px) {
+  .top-header {
+    height: 80px;
+    padding: 10px 15px;
+  }
+
+  .text-content h1 {
+    font-size: 1.2rem;
+    margin-left: 33px;
+    margin-top: 5px;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+    margin-left: 33px;
+  }
+
+  .profile-photo img {
+    width: 60px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .top-header {
+    height: 70px;
+    padding: 10px 15px;
+  }
+
+  .text-content h1 {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
+  .text-content p {
+    font-size: 0.8rem;
+  }
+
+  .profile-photo img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-header {
+    height: 60px;
+    padding: 8px 10px;
+  }
+
+  .text-content h1 {
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .text-content p {
+    font-size: 0.7rem;
+  }
+
+  .profile-photo img {
+    width: 50px;
+    height: 60px;
+  }
+
+  .hamburger-btn {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-header {
+    height: 50px;
+    padding: 5px 8px;
+  }
+
+  .text-content h1 {
+    font-size: 0.7rem;
+    margin-top: 5px;
+  }
+
+  .text-content p {
+    font-size: 0.6rem;
+  }
+
+  .profile-photo img {
+    width: 40px;
+    height: 45px;
+  }
+
+  .hamburger-btn {
+    font-size: 1.2rem;
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .top-header {
+    height: 40px;
+    padding: 5px 8px;
+  }
+
+  .text-content h1 {
+    font-size: 0.5rem;
+    margin-top: 5px;
+  }
+
+  .text-content p {
+    font-size: 0.3rem;
+  }
+
+  .profile-photo img {
+    width: 30px;
+    height: 40px;
+  }
+
+  .hamburger-btn {
+    font-size: 1.1rem;
+  }
+}

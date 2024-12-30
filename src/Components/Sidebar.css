@@ -1,0 +1,282 @@
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 100px;
+  left: -250px;
+  width: 210px;
+  height: 90%;
+  background-color: #007bff; /* Deep Blue background */
+  color: white;
+  transition: left 0.3s ease-in-out, background-color 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adding a shadow for depth */
+  border-radius: 5px; /* Slightly rounded corners for a smoother look */
+  overflow-y: auto;
+}
+/* Sidebar open state */
+.sidebar.open {
+  left: 0;
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Keyframes for sliding the sidebar */
+@keyframes slideIn {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* Sidebar list */
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar list items */
+.sidebar li {
+  padding: 12px 15px;
+  margin-bottom: 6px; /* Add spacing between list items */
+  border-bottom: none; /* Remove unnecessary bottom borders */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border-radius: 5px; /* Match the rounded look of the sidebar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for separation */
+}
+
+/* Active link styling */
+.sidebar li.active {
+  background-color: #1d72b8;
+}
+
+.sidebar li.active a {
+  color: white;
+}
+
+/* Sidebar links */
+.sidebar li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effects */
+.sidebar li:hover {
+  background-color: #3b5b8f;
+}
+
+.sidebar li a:hover {
+  color: #ffd700;
+}
+
+/* Dropdown header */
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures proper spacing */
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+  gap: 8px; /* Adds space between icon and text */
+}
+
+.dropdown-header span {
+  flex-grow: 1; /* Pushes the text to the left */
+  text-align: left; /* Align text properly */
+  margin-right: 10px; /* Add more space between text and the dropdown arrow */
+  
+}
+
+
+.dropdown-header.open + .submenu {
+  margin-top: 8px; /* Space between Recognition and submenu */
+}
+
+.dropdown-header:hover {
+  background-color: transparent;
+  color: #ffd700;
+}
+
+.dropdown-header svg {
+  font-size: 0.9rem;
+  margin-left: auto; 
+}
+
+/* Submenu styles */
+.submenu {
+  list-style: none;
+  padding: 10px 0; /* Add padding for the submenu group */
+  margin: 0 10px; /* Add spacing around the submenu */
+  overflow: hidden;
+  max-height: 0; /* Hidden by default */
+  background-color: #0056b3; /* Background color matching the theme */
+  border-radius: 5px; /* Rounded corners */
+  transition: max-height 0.3s ease, margin-top 0.3s ease; /* Smooth expand/collapse */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for submenu */
+}
+
+/* Submenu expanded */
+.submenu.open {
+  max-height: 500px; /* Large enough to accommodate all items */
+  margin-top: 10px;
+}
+
+/* Submenu list items */
+.submenu li {
+  padding: 8px 15px; /* Add padding for spacing */
+  margin-bottom: 5px; /* Space between submenu items */
+  border-bottom: none; /* No bottom border for cleaner look */
+  display: flex;
+  align-items: center;
+  background-color: #004080; /* Slightly darker color for submenu items */
+  border-radius: 5px; /* Rounded corners for submenu items */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.submenu li:last-child {
+  margin-bottom: 0;
+}
+
+/* Submenu links */
+.submenu li a {
+  color: white; /* Text color */
+  text-decoration: none;
+  font-size: 0.7rem; /* Slightly smaller font size */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for submenu items */
+.submenu li a:hover {
+  color: #ffd700; /* Golden color on hover */
+}
+
+.submenu li a svg {
+  font-size: 1.2rem; /* Adjust the size of the icon */
+}
+
+
+/* Bullet points for submenu items */
+.submenu li::before {
+  font-size: 0.9rem;
+  color: #ffd700; /* Golden bullet point */
+  margin-right: 8px;
+}
+
+
+/* Recognition Icon Styles */
+.recognition-icon {
+  font-size: 1.8rem; /* Increase the size */
+  margin-right: 8px; /* Add some space between the icon and text */
+}
+
+/* Sidebar Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Sidebar closing animation */
+.sidebar li a.active {
+  animation: textColorChange 0.3s ease-in-out;
+}
+
+/* Keyframe for the text color change on active */
+@keyframes textColorChange {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #ffd700; /* Golden color for active items */
+  }
+}
+
+/* Media Queries for Responsiveness */
+/* Media Queries for Responsive Sidebar */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 25%; /* Sidebar occupies 80% of the screen width */
+    left: -80%; /* Ensure hidden state adjusts proportionally */
+    top: 80px;
+  }
+
+  .sidebar.open {
+    left: 0; /* Ensure it slides in fully */
+  }
+
+  .sidebar li {
+    font-size: 0.8rem; /* Adjust font size for list items */
+    padding: 10px 12px;
+  }
+
+  .sidebar li a {
+    font-size: 0.8rem; /* Adjust font size of links */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    width: 38%; /* Sidebar occupies 90% of the screen width */
+    left: -90%; /* Ensure hidden state adjusts proportionally */
+    top: 60px; /* Adjust top position for smaller headers */
+  }
+
+  .sidebar li {
+    font-size: 0.8rem; /* Further reduce font size for list items */
+    padding: 8px 10px;
+  }
+
+  .sidebar li a, .recognition-icon span {
+    font-size: 0.8rem; /* Adjust font size for links */
+    gap: 5px; /* Reduce spacing between icons and text */
+  }
+
+  .submenu li a {
+    font-size: 0.6rem; /* Further reduce font size for submenu links */
+  }
+
+  .submenu li {
+    padding: 6px 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .sidebar {
+    width: 50%; /* Sidebar occupies full width */
+    left: -100%; /* Ensure it slides off-screen */
+    height: 100%;
+  }
+
+  .sidebar li,.recognition-icon span   {
+    font-size: 0.7rem; /* Smallest font size for list items */
+    padding: 6px 8px;
+  }
+
+
+  .submenu li {
+    padding: 5px 8px; /* Adjust submenu padding */
+  }
+
+  .submenu li a {
+    font-size: 0.5rem; /* Smallest font size for submenu links */
+  }
+
+  .recognition-icon {
+    font-size: 1.2rem; /* Smaller icon size */
+  }
+}

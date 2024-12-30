@@ -1,0 +1,180 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.reviewer-container {
+    margin: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    border-left: 6px solid #0056b3;
+    animation: fadeIn 1s ease-out; /* Fade-in effect */
+  }
+  
+  .reviewer-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: slideInFromBottom 1.2s ease-out; 
+  }
+  
+  .reviewer-description {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+   
+  }
+  
+  .reviewer-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reviewer-description + .reviewer-image {
+    margin-top: 25px;
+  }
+  
+  @media (min-width: 768px) {
+    .reviewer-container {
+      padding: 40px;
+    }
+  
+    .reviewer-heading {
+      font-size: 32px;
+    }
+  
+    .reviewer-description {
+      font-size: 20px;
+    }
+  
+    .reviewer-image {
+      max-width: 80%;
+    }
+  }
+
+  @media (min-width: 564px) {
+    .reviewer-container {
+      padding: 40px;
+      margin-top: 140px;
+    }
+  
+    .reviewer-heading {
+      font-size: 32px;
+    }
+  
+    .reviewer-description {
+      font-size: 15px;
+    }
+  
+    .reviewer-image {
+      max-width: 80%;
+    }
+    .reviewer-heading{
+      font-size: x-large;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .reviewer-container {
+      padding: 40px;
+      margin-top: 140px;
+    }
+  
+    .reviewer-heading {
+      font-size: 32px;
+    }
+  
+    .reviewer-description {
+      font-size: 20px;
+    }
+  
+    .reviewer-image {
+      max-width: 80%;
+    }
+    .reviewer-heading{
+      font-size: xx-large;
+    }
+  }
+
+  @media (min-width: 468px) {
+    .reviewer-container {
+      padding: 40px;
+      margin-top: 170px;
+    }
+  
+    .reviewer-heading {
+      font-size: 32px;
+    }
+  
+    .reviewer-description {
+      font-size: 14px;
+    }
+  
+    .reviewer-image {
+      max-width: 80%;
+    }
+    .reviewer-heading{
+      font-size: x-large;
+    }
+  }
+  
+  @media (min-width: 300px) and (max-width: 467px) {
+    .reviewer-container {
+      padding: 40px;
+      margin-top: 200px;
+    }
+  
+    .reviewer-heading {
+      font-size: 32px;
+    }
+  
+    .reviewer-description {
+      font-size: 14px;
+    }
+  
+    .reviewer-image {
+      max-width: 80%;
+    }
+    .reviewer-heading{
+      font-size: x-large;
+    }
+  }
+  

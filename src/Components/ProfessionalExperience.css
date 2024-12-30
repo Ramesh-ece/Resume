@@ -1,0 +1,272 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.experience-container {
+  margin: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+  border-left: 6px solid #0056b3;
+  animation: fadeIn 1s ease-out; /* Fade-in effect */
+}
+
+.experience-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  animation: slideInFromBottom 1.2s ease-out; 
+}
+
+
+
+.experience-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.experience-table th,
+.experience-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.experience-table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.experience-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.experience-table tbody tr:hover {
+  background-color: #e9ecef;
+  transition: background-color 0.3s ease;
+}
+
+.experience-table td {
+  color: #555;
+  font-size: 1rem;
+}
+
+.total-experience {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.admin-experience {
+  margin-top: 30px;
+}
+
+.admin-experience-title {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.admin-experience h4 {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.admin-experience ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-experience li {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.tick {
+  color: green;
+  margin-right: 8px;
+}
+
+@media (max-width: 1200px) {
+  .experience-container {
+    margin-top: 50px;
+    padding: 15px;
+  }
+
+  .experience-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .experience-table th, .experience-table td {
+    padding: 10px 12px;
+  }
+
+  .total-experience {
+    font-size: 1.1rem;
+  }
+
+  .admin-experience h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .experience-container {
+    margin-top: 90px;
+    padding: 12px;
+  }
+
+  .experience-container h2 {
+    font-size: 1.5rem;
+  }
+
+
+  .experience-table th, .experience-table td {
+    padding: 8px 10px;
+  }
+
+  .experience-table td {
+    font-size: 0.95rem;
+  }
+
+  .total-experience {
+    font-size: 1rem;
+  }
+
+  .admin-experience h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    margin-top: 100px;
+    padding: 10px;
+  }
+
+  .experience-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .experience-table {
+    font-size: 0.9rem;
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    display: block;
+  }
+
+  .experience-table th, .experience-table td {
+    padding: 8px;
+  }
+
+  .experience-table td {
+    font-size: 0.9rem;
+  }
+
+  .total-experience {
+    font-size: 1rem;
+  }
+
+  .admin-experience h4 {
+    font-size: 1rem;
+  }
+
+  /* Scrollable table for small screens */
+  .experience-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+}
+
+@media (max-width: 576px) {
+  .experience-container {
+    margin-top: 140px;
+    padding: 8px;
+  }
+
+  .experience-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .experience-table th, .experience-table td {
+    padding: 6px 8px;
+  }
+
+  .experience-table td {
+    font-size: 0.85rem;
+  }
+
+  .total-experience {
+    font-size: 0.95rem;
+  }
+
+  .admin-experience h4 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .experience-container {
+    margin-top: 190px;
+    padding: 8px;
+  }
+
+  .experience-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .experience-table th, .experience-table td {
+    padding: 6px 8px;
+  }
+
+  .experience-table td {
+    font-size: 0.85rem;
+  }
+
+  .total-experience {
+    font-size: 0.95rem;
+  }
+
+  .admin-experience h4 {
+    font-size: 0.95rem;
+  }
+  
+}

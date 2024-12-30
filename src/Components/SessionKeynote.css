@@ -1,0 +1,220 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.session-container {
+    margin: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    border-left: 6px solid #0056b3;
+    animation: fadeIn 1s ease-out; /* Fade-in effect */
+  }
+  
+  .session-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color:#333;
+    font-weight: bold;
+    padding-bottom: 10px;
+    animation: slideInFromBottom 1.2s ease-out; 
+  }
+
+  .session-header1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color:#333;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  
+  .session-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .session-table th,
+  .session-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .session-table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .session-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .session-table tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+  }
+  
+  .session-table td {
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  /* Styling for certificate images */
+  .session-image {
+    width: 500px; /* Increased size */
+    height: auto;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .session-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .session-table,
+    .session-table thead,
+    .session-table tbody,
+    .session-table th,
+    .session-table td,
+    .session-table tr {
+      overflow-x: auto;
+    }
+  
+  
+    .session-table tr {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+    }
+  
+    .session-table td {
+      padding: 10px;
+      text-align: right;
+      position: relative;
+    }
+  
+    .session-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+    .session-container{
+      margin-top: 100px;
+    }
+
+  }
+
+  @media (max-width: 1024px) {
+    .session-table,
+    .session-table thead,
+    .session-table tbody,
+    .session-table th,
+    .session-table td,
+    .session-table tr {
+      overflow-x: auto;
+    }
+  
+  
+    .session-table tr {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+    }
+  
+    .session-table td {
+      padding: 10px;
+      text-align: right;
+      position: relative;
+    }
+  
+    .session-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+    .session-container{
+      margin-top: 100px;
+    }
+
+  }
+
+  @media (max-width: 564px) {
+    .session-table,
+    .session-table thead,
+    .session-table tbody,
+    .session-table th,
+    .session-table td,
+    .session-table tr {
+      overflow-x: auto;
+    }
+  
+  
+    .session-table tr {
+      margin-bottom: 8px;
+      border: 1px solid #ddd;
+    }
+  
+    .session-table td {
+      padding: 8px;
+      text-align: right;
+      position: relative;
+    }
+  
+    .session-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+    .session-container{
+      margin-top: 140px;
+    }
+
+  }
+  

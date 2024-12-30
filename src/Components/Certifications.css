@@ -1,0 +1,157 @@
+.certification-card {
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .certification-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .certification-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .certification-title {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto; /* Allow scrolling for overflow content */
+  }
+  
+  .modal-content {
+    position: relative;
+    max-width: 48%; /* Adjusted for better fit */
+    max-height: 90%; /* Adjusted for better fit */
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px; /* More space for the close button */
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 80vh; /* Limit max height to avoid overflow */
+    object-fit: contain; /* Ensure the image fits inside the modal */
+  }
+  
+  .close-btn {
+    position: fixed;
+    top: 27px;  /* Move it above the image */
+    right: 350px; /* Move it to the right of the modal */
+    background: rgb(226, 11, 11); /* Dark color */
+    color: white;
+    border-radius: 50%; /* Make it circular */
+    width: 40px; /* Set width */
+    height: 30px; /* Set height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem; /* Adjust size of the X */
+    cursor: pointer;
+    z-index: 1001; /* Ensures the close button is always on top */
+    border: none;
+    outline: none;
+  }
+  
+  .modal-content:focus {
+    outline: none; /* Removes focus ring from modal on click */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (min-width: 1200px) {
+    .modal-content {
+      max-width: 40%;
+    }
+  
+    .close-btn {
+      top:35px;
+      right:415px;
+      width: 40px;
+      height: 40px;
+      font-size: 2rem;
+    }
+  }
+  
+  /* Medium Screens (992px to 1199px) */
+  @media (max-width: 1199px) and (min-width: 992px) {
+    .modal-content {
+      max-width: 50%;
+    }
+  
+    .close-btn {
+      top: 90px;
+      right: 200px;
+      width: 40px;
+      height: 40px;
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Small Screens (768px to 991px) */
+  @media (max-width: 991px) and (min-width: 768px) {
+    .modal-content {
+      max-width: 70%;
+    }
+  
+    .close-btn {
+      top: 10px;
+      right: 45px;
+      width: 35px;
+      height: 35px;
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* Extra Small Screens (576px to 767px) */
+  @media (max-width: 767px) and (min-width: 576px) {
+    .modal-content {
+      max-width: 85%;
+    }
+  
+    .close-btn {
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+      font-size: 1.4rem;
+    }
+  }   
+  
+  /* Extra Extra Small Screens (below 576px) */
+  @media (max-width: 575px) {
+    .modal-content {
+      max-width: 95%;
+    }
+  
+    .close-btn {
+      top: 20px;
+      right: 10px;
+      width: 25px;
+      height: 25px;
+      font-size: 1.2rem;
+    }
+}

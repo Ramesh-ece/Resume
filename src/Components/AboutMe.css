@@ -1,0 +1,205 @@
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apply animations to components */
+.about-me-container {
+  background-color: #f4f4f4;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+  margin-top: 100px;
+  animation: fadeIn 1s ease-out; /* Fade-in effect */
+}
+
+.about-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0056b3;
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0056b3;
+  padding-bottom: 5px;
+  animation: slideIn 1s ease-out;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.summary-box {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 6px solid #0056b3;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 25px;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.summary-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0056b3;
+  margin-bottom: 15px;
+}
+
+.summary-list {
+  font-size: 1.1rem;
+  color: #555;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.summary-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.summary-list li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: #0056b3;
+  font-size: 1.2rem;
+}
+
+.pro-photo {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: scaleUp 1.2s ease-out;
+}
+
+.pro-photo img {
+  max-width: 100%;
+  height: auto;
+  border: 6px solid #0056b3;
+  border-radius: 50%;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 20px;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.contact-box h4 {
+  font-size: 1.6rem;
+  color: #0056b3;
+  margin-bottom: 15px;
+}
+
+.contact-box p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.contact-box a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+  color: #00376b;
+}
+
+/* Media Queries for responsive adjustments */
+@media (max-width: 768px) {
+  .about-me-container {
+    padding: 20px;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .summary-box {
+    padding: 20px;
+  }
+
+  .contact-box {
+    padding: 15px;
+  }
+  
+  /* Add delay for animations on smaller screens */
+  .about-me-container {
+    animation: fadeIn 1.5s ease-out 0.2s; /* Delay added */
+  }
+
+  .about-title {
+    animation: slideIn 1.2s ease-out 0.2s;
+  }
+
+  .intro-text {
+    animation: fadeIn 1.5s ease-out 0.4s;
+  }
+
+  .summary-box {
+    animation: slideInFromLeft 1.2s ease-out 0.2s;
+  }
+
+  .pro-photo {
+    animation: scaleUp 1.5s ease-out 0.2s;
+  }
+
+  .contact-box {
+    animation: slideInFromLeft 1.2s ease-out 0.4s;
+  }
+}

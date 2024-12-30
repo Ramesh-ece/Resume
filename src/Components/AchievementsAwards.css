@@ -1,0 +1,457 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.achievements-container {
+  margin: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+  border-left: 6px solid #0056b3;
+  animation: fadeIn 1s ease-out; /* Fade-in effect */
+}
+
+.achievements-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  animation: slideInFromBottom 1.2s ease-out; 
+  
+}
+
+.achievements-container h4 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.achievements-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.achievements-table th,
+.achievements-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.achievements-table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.achievements-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.achievements-table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.achievements-table td {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Sections navigation positioning */
+.sections-nav {
+  position: absolute; /* Position outside the container */
+  top: 270px;
+  left: 100px; /* Adjust to move the nav to the right outside the container */
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease; /* Smooth animation for sections nav */
+}
+
+/* Button styles */
+.sections-nav button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 30px;
+  background-color: transparent;
+  color: #007bff;
+  text-align: left;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between text and arrow */
+  transition: all 0.3s ease;
+}
+
+.sections-nav button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.sections-nav button:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+.sections-nav button:before {
+  content: "→"; /* Right arrow symbol */
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  margin-right: 8px; /* Space between arrow and text */
+}
+
+.sections-nav button.active:before {
+  content: "←"; /* Left arrow when active */
+}
+
+.sections-nav button:hover:before {
+  transform: translateX(5px); /* Move arrow on hover */
+}
+
+/* Optional: Adding some extra hover effects for more interactivity */
+.sections-nav button:hover {
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Blue shadow */
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+/* Section styling */
+.section {
+  margin-top: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Certificate Styling */
+.certificate-container {
+  margin-top: 20px;
+  text-align: center;
+  max-height: 100vh; /* Ensure it doesn't exceed viewport height */
+  overflow: hidden; /* Prevent vertical scroll */
+}
+
+.certificate-image {
+  max-width: 100%;
+  max-height: 500px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+.certificate-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.certificate-container::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 10px;
+}
+
+
+html, body {
+  height: 100%;    /* Ensure the body takes the full height */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-y: auto;  /* Allow vertical scrolling if content exceeds */
+  padding: 10px;
+}
+
+/* Custom Scrollbar for Webkit Browsers */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007bff; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  box-shadow: inset 0 0 5px rgba(0, 123, 255, 0.5); /* Optional shadow effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; /* Darker color when hovering over the thumb */
+}
+
+/* Firefox Custom Scrollbar */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #007bff #f1f1f1; /* Thumb color and track color */
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+
+/* Responsive design adjustments */
+@media (max-width: 1024px) {
+  /* For tablets */
+  .achievements-container {
+    padding: 15px;
+    margin-top: 150px;
+  }
+
+  .sections-nav {
+    left: 50px;
+    top: 150px;
+    width: 180px;
+  }
+
+  .achievements-table th, .achievements-table td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  /* For tablets */
+  .achievements-container {
+    padding: 15px;
+    margin-top: 100px;
+  }
+
+  .sections-nav {
+    left: 50px;
+    top: 150px;
+    width: 180px;
+  }
+
+  .achievements-table th, .achievements-table td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile */
+  .achievements-container {
+    padding: 10px;
+    margin-top: 100px;
+  }
+  .sections-nav {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .achievements-table {
+    font-size: 0.85rem;
+  }
+
+  .achievements-table tr {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .achievements-table td {
+    padding: 10px;
+    text-align: right;
+    position: relative;
+  }
+
+  .achievements-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .sections-nav button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* For tablets */
+  .achievements-container {
+    padding: 15px;
+    margin-top: 150px;
+  }
+
+  .achievements-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .sections-nav {
+    left: 50px;
+    top: 150px;
+    width: 180px;
+  }
+
+  .achievements-table th, .achievements-table td {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  /* For very small screens */
+  .achievements-table {
+    font-size: 0.75rem;
+    
+  }
+
+  .achievements-container {
+    padding: 15px;
+    margin-top: 170px;
+    
+  }
+
+  .achievements-container h2 {
+    font-size: 1.3rem;
+    
+  }
+
+  .sections-nav {
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 10px;
+    
+  }
+
+  .sections-nav button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .achievements-table td {
+    font-size: 0.8rem;
+  }
+}
+
+@media  (max-width: 360px) {
+  /* For very small screens */
+  .achievements-table {
+    font-size: 0.75rem;
+  }
+
+  .achievements-container {
+    padding: 15px;
+    margin-top: 200px;
+  }
+
+  .achievements-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .sections-nav {
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .sections-nav button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .achievements-table td {
+    font-size: 0.8rem;
+  }
+}
