@@ -16,7 +16,7 @@ const Publications = () => {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get('http://localhost:4000/publications');
+            const response = await axios.get('https://resume-g-p-rameshs-projects.vercel.app/');
             // Sort publications by year in descending order (latest first)
             const sortedPublications = response.data.sort((a, b) => b.year - a.year);
             setPublications(sortedPublications);
