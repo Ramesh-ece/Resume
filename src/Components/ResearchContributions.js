@@ -166,7 +166,7 @@ const ResearchContributions = () => {
               <td><img src={PublonsID} className="profile-icon" /> <strong>Publons ID</strong></td>
               <td>
                 <a
-                  href="https://publons.com/wos-op/researcher/2541299"
+                  href="https://publons.com/wos-op/researcher/3594458/gp-ramesh/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-box"
@@ -179,7 +179,7 @@ const ResearchContributions = () => {
               <td><img src={LinkedIn} className="profile-icon" /> <strong>LinkedIn</strong></td>
               <td>
                 <a
-                  href="https://www.linkedin.com/in/dr-gp-ramesh-88b7256b"
+                  href="https://www.linkedin.com/in/gpramesh/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-box"

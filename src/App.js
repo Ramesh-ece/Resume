@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Sidebar from "./Components/Sidebar";
 import Header from "./Components/Header"; // Import the Header component
 import AboutMe from "./Components/AboutMe";
@@ -36,15 +36,19 @@ const App = () => {
           {/* Content Area */}
           <div className="content-area">
             <Routes>
+              {/* Default Route */}
+              <Route path="/" element={<Navigate to="/about" />} />
+              
+              {/* Other Routes */}
               <Route path="/about" element={<AboutMe />} />
               <Route path="/education" element={<AcademicQualifications />} />
               <Route path="/experience" element={<ProfessionalExperience />} />
               <Route path="/research" element={<ResearchContributions />} />
               <Route path="/awards" element={<AchievementsAwards />} />
               <Route path="/patents" element={<Patents />} />
-              <Route path= "/Participation" element={<Participation />} />
-              <Route path= "/Reviewer" element={<Reviewer />} />
-              <Route path= "/SessionKeynote" element={<SessionKeynote />} />
+              <Route path="/participation" element={<Participation />} />
+              <Route path="/reviewer" element={<Reviewer />} />
+              <Route path="/sessionkeynote" element={<SessionKeynote />} />
               <Route path="/memberships" element={<Memberships />} />
               <Route path="/projects" element={<ProjectsConsultations />} />
               <Route path="/publications" element={<Publications />} />
